@@ -101,9 +101,11 @@
     
     CGFloat closeBtnOriginX = btnWidth * 3;
     _closeBt = [[UIButton alloc] initWithFrame:CGRectMake(closeBtnOriginX, 0, btnWidth, btnHeight)];
-
-    [_closeBt setImage:[UIImage imageNamed:@"NaverAuth.bundle/btn_notice_close_normal.png"] forState:UIControlStateNormal];
+    
+    //    [_closeBt setImage:[UIImage imageNamed:@"NaverAuth.bundle/btn_notice_close_normal.png"] forState:UIControlStateNormal];
     [_closeBt addTarget:self action:@selector(closeBtAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_closeBt setTitle:@"닫기" forState:UIControlStateNormal];
+    [_closeBt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_bottomBar addSubview:_closeBt];
 }
 
